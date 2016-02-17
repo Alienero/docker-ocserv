@@ -1,5 +1,7 @@
 FROM debian:jessie
 
+VOLUME /etc/ocserv/
+
 # Install runtime packages
 RUN apt-get update && apt-get install -y gnutls-bin iptables libnl-route-3-200 libseccomp2 libwrap0 openssl --no-install-recommends && rm -rf /var/lib/apt/lists/* 
 
